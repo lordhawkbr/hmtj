@@ -1,0 +1,35 @@
+.logo_oss {
+    width: 250px;
+}
+
+.acesso_info {
+    width: 150px;
+}
+
+.main_jumbo {
+    color: #FFF !important;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to right, #09B8BD, #2B6D7B);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.main_jumbo::after {
+    content: "";
+    background:
+        url("./../img/logo_100_sus.svg") no-repeat left 10px center,
+        url("./../img/selo_ona.svg") no-repeat right 20px center;
+    background-size: 120px, 120px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 200px;
+}
+
+.logo_footer {
+    width: 100px;
+}
