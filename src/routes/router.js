@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 
 router.get("/posts/:id", (req, res, next) => {
     const postId = req.params.id;
-    const post = conteudo.find(item => item.id === postId);  // Encontrar o post correspondente
+    const post = conteudo.find(item => item.id === postId);
 
     if (post) {
         res.render("post", { post });
