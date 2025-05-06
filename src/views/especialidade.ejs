@@ -1,0 +1,77 @@
+<%- include("header") %>
+    <%- include("navbar") %>
+        <main class="container">
+            <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary ps_jumbo">
+                <div class="col-lg-9 px-0">
+                    <h1 class="display-4 fst-italic">
+                        <%= post.title%>
+                    </h1>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/post/especialidades">ESPECIALIDADES</a></li>
+                            <li class="breadcrumb-item active" aria-current="/post/<%= especialidade%>"><%= post.title%></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-8">
+                    <div class="row my-3">
+                        <%- post.content.join('') %>
+                    </div>
+                    <% if (post.images && post.images.length> 0) { %>
+                        <div class="row g-5">
+                            <div class="col">
+                                <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <% post.images.forEach(function(imgUrl, index) { %>
+                                            <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+                                                <img src="<%= imgUrl %>" class="img-fluid d-block w-100"
+                                                    alt="Imagem <%= index + 1 %>">
+                                            </div>
+                                            <% }) %>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carousel"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                </div>
+                <div class="col-md-4">
+                    <div class="position-sticky">
+                        <div>
+                            <h4 class="fst-italic">Leia também</h4>
+                            <ul class="list-group list-group-flush list-group-unidades">
+                                <% randomPosts.forEach(function(item) { %>
+                                    <li class="list-group-item">
+                                        <a class="d-flex align-items-center gap-2 text-decoration-none custom-hover"
+                                            href="/post/especialidade/<%= item.postId %>">
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                            <span class="text-uppercase">
+                                                <%= item.title %>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <% }) %>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <%- include("footer") %>

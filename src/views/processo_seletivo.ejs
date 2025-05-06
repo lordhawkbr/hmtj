@@ -1,0 +1,136 @@
+<%- include("header") %>
+    <%- include("navbar") %>
+        <main class="container">
+            <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary ps_jumbo">
+                <div class="col-lg-9 px-0">
+                    <h1 class="display-4 fst-italic">Unidade X - Edital 001/2025</h1>
+                    </p>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-8">
+                    <h2 class="fst-italic mb-2">Publicações</h2>
+                    <div class="accordion" id="accordion_2">
+                        <% Object.entries(result).forEach(([categoria, grupos], indexCat)=> { %>
+                            <% if (Array.isArray(grupos) && typeof grupos[0]==='object' && grupos[0] !==null) { %>
+                                <% // Caso como RESULTADO ou CONVOCAÇÃO %>
+                                    <% grupos.forEach((grupo, indexGrupo)=> { %>
+                                        <% Object.entries(grupo).forEach(([titulo, itens], indexItem)=> {
+                                            const collapseId = `collapse_${indexCat}_${indexGrupo}_${indexItem}`;
+                                            %>
+                                            <div class="accordion-item">
+                                                <p class="accordion-header">
+                                                    <button class="accordion-button collapsed custom-hover"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#<%= collapseId %>" aria-expanded="false"
+                                                        aria-controls="<%= collapseId %>">
+                                                        <%= titulo %>
+                                                    </button>
+                                                </p>
+                                                <div id="<%= collapseId %>" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordion_2">
+                                                    <div class="accordion-body">
+                                                        <ul class="list-group list-group-flush list-group-unidades">
+                                                            <% if (Array.isArray(itens)) { %>
+                                                                <% itens.forEach(item=> { %>
+                                                                    <li class="list-group-item">
+                                                                        <a class="d-flex align-items-center gap-2 text-decoration-none custom-hover"
+                                                                            href="#">
+                                                                            <i class="bi bi-box-arrow-up-right"></i>
+                                                                            <span class="text-uppercase">
+                                                                                <%= item %>
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <% }) %>
+                                                                        <% } %>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <% }) %>
+                                                <% }) %>
+
+                                                    <% } else if (Array.isArray(grupos)) { %>
+                                                        <% // Caso como ERRATA ou COMUNICADO %>
+                                                            <% const collapseId=`collapse_${indexCat}`; %>
+                                                                <div class="accordion-item">
+                                                                    <p class="accordion-header">
+                                                                        <button
+                                                                            class="accordion-button collapsed custom-hover"
+                                                                            type="button" data-bs-toggle="collapse"
+                                                                            data-bs-target="#<%= collapseId %>"
+                                                                            aria-expanded="false"
+                                                                            aria-controls="<%= collapseId %>">
+                                                                            <%= categoria %>
+                                                                        </button>
+                                                                    </p>
+                                                                    <div id="<%= collapseId %>"
+                                                                        class="accordion-collapse collapse"
+                                                                        data-bs-parent="#accordion_2">
+                                                                        <div class="accordion-body">
+                                                                            <ul
+                                                                                class="list-group list-group-flush list-group-unidades">
+                                                                                <% grupos.forEach(item=> { %>
+                                                                                    <li class="list-group-item">
+                                                                                        <a class="d-flex align-items-center gap-2 text-decoration-none custom-hover"
+                                                                                            href="#">
+                                                                                            <i
+                                                                                                class="bi bi-box-arrow-up-right"></i>
+                                                                                            <span
+                                                                                                class="text-uppercase">
+                                                                                                <%= item %>
+                                                                                            </span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <% }) %>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <% } %>
+
+                                                                    <% }) %>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="position-sticky">
+                        <div>
+                            <h4 class="fst-italic">Links úteis</h4>
+                            <ul class="list-group list-group-flush list-group-unidades">
+                                <li class="list-group-item">
+                                    <a class="d-flex align-items-center gap-2 text-decoration-none custom-hover"
+                                        href="#">
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                        <span class="text-uppercase">INSCRIÇÃO</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="d-flex align-items-center gap-2 text-decoration-none custom-hover"
+                                        href="#">
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                        <span class="text-uppercase">PASSO A PASSO P/ INSCRIÇÃO (VIDEO)</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="d-flex align-items-center gap-2 text-decoration-none custom-hover"
+                                        href="#">
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                        <span class="text-uppercase">PEDIDO DE RECONSIDERAÇÃO</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="d-flex align-items-center gap-2 text-decoration-none custom-hover"
+                                        href="#">
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                        <span class="text-uppercase">DÚVIDAS</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <%- include("footer") %>

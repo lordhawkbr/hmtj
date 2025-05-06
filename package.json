@@ -4,7 +4,7 @@
   "description": "Using Node.js with Express and EJS to create a dynamic site with create, edit and delete posts.",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "author": "Marllon Macedo",
   "license": "ISC",
