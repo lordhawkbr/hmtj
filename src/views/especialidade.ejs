@@ -4,7 +4,7 @@
             <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary ps_jumbo">
                 <div class="col-lg-9 px-0">
                     <h1 class="display-4 fst-italic">
-                        <%= post.title%>
+                        <%= page.title%>
                     </h1>
                     </p>
                 </div>
@@ -13,8 +13,8 @@
                 <div class="col">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/post/especialidades">ESPECIALIDADES</a></li>
-                            <li class="breadcrumb-item active" aria-current="/post/<%= especialidade%>"><%= post.title%></li>
+                            <li class="breadcrumb-item"><a href="/especialidades">ESPECIALIDADES</a></li>
+                            <li class="breadcrumb-item active" aria-current="/<%= especialidade%>"><%= page.title%></li>
                         </ol>
                     </nav>
                 </div>
@@ -22,14 +22,14 @@
             <div class="row g-5">
                 <div class="col-md-8">
                     <div class="row my-3">
-                        <%- post.content.join('') %>
+                        <%- page.content.join('') %>
                     </div>
-                    <% if (post.images && post.images.length> 0) { %>
+                    <% if (page.images && page.images.length> 0) { %>
                         <div class="row g-5">
                             <div class="col">
                                 <div id="carousel" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-inner">
-                                        <% post.images.forEach(function(imgUrl, index) { %>
+                                        <% page.images.forEach(function(imgUrl, index) { %>
                                             <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
                                                 <img src="<%= imgUrl %>" class="img-fluid d-block w-100"
                                                     alt="Imagem <%= index + 1 %>">
@@ -56,10 +56,10 @@
                         <div>
                             <h4 class="fst-italic">Leia também</h4>
                             <ul class="list-group list-group-flush list-group-unidades">
-                                <% randomPosts.forEach(function(item) { %>
+                                <% randompages.forEach(function(item) { %>
                                     <li class="list-group-item">
                                         <a class="d-flex align-items-center gap-2 text-decoration-none custom-hover"
-                                            href="/post/especialidade/<%= item.postId %>">
+                                            href="/especialidade/<%= item.pageId %>">
                                             <i class="bi bi-box-arrow-up-right"></i>
                                             <span class="text-uppercase">
                                                 <%= item.title %>

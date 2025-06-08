@@ -120,7 +120,7 @@ const especialidades = [
         "pageId": "agencia-transfusional-hemoterapia",
         "content": [
             "<p>A Agência Transfusional do Hospital e Maternidade Therezinha de Jesus tem estrutura ideal para um Hospital Geral do porte do HMTJ. Ela é uma unidade hemoterápica que tem como principais funções armazenar hemocomponentes, realizar exames pré-transfusionais, liberar e transportar os hemocomponentes entre os setores do hospital.</p>",
-            "<p>A Agência Transfusional do HMTJ funciona 24 horas, com processos bem definidos e a unidade após receber a solicitação do hemocomponente, realiza a coleta da amostra do paciente, fazendo a conferência e registro no momento da coleta – quando identifica na amostra nome completo do paciente, prontuário, enfermaria, leito, data e hora da coleta. Logo após, a agência realiza todos os testes pré-transfusionais conforme Legislação vigente (Portaria N° 158, de 04 de Fevereiro de 2016), que redefine regulamento técnico e procedimentos hemoterápicos. Os testes realizados são a classificação sanguínea, prova direta e reversa, Fator RhD, Pesquisa de Anticorpo Irregular e prova de compatibilidade.</p>",
+            "<p>A Agência Transfusional do HMTJ funciona 24 horas, com processos bem definidos e a unidade após receber a solicitação do hemocomponente, realiza a coleta da amostra do paciente, fazendo a conferência e registro no momento da coleta - quando identifica na amostra nome completo do paciente, prontuário, enfermaria, leito, data e hora da coleta. Logo após, a agência realiza todos os testes pré-transfusionais conforme Legislação vigente (Portaria N° 158, de 04 de Fevereiro de 2016), que redefine regulamento técnico e procedimentos hemoterápicos. Os testes realizados são a classificação sanguínea, prova direta e reversa, Fator RhD, Pesquisa de Anticorpo Irregular e prova de compatibilidade.</p>",
             "<p>A unidade participa do controle de qualidade externo AEQ (Avaliação Externa da Qualidade) que faz parte da Política Nacional do Sangue e Hemoderivados do Ministério da Saúde. Além de ser responsável pelo controle de qualidade interno dos reagentes. Isso é feito rotineiramente, quando todo hemocomponente é liberado. Ele é devidamente identificado com etiqueta contendo os dados do receptor, do hemocomponente a ser transfundido, o resultado do teste e o responsável pela liberação.</p>",
             "<p>A Agência Transfusional coordena ainda o Comitê Transfusional, formado por uma equipe multidisciplinar com reuniões trimestrais. A unidade está sob responsabilidade de uma Hematologista e de uma coordenadora técnica, que também possui formação em Biomedicina e experiência de mais de 25 anos na área, além de técnicos de patologia clínica cobrindo todos os plantões.</p>"
         ],
@@ -140,7 +140,7 @@ const especialidades = [
             "<p>O Serviço de Cardiologia do Hospital e Maternidade Therezinha de Jesus (HMTJ) é o mais completo, na rede 100% SUS da região, e está disponível para receber qualquer paciente cardiopata. Disponibiliza, além de consultas em ambulatórios especializados, cirurgia cardíaca adulta e pediátrica, exames complementares, além de exames diagnósticos e terapêuticos, inclusive os de alta complexidade em laboratório de Hemodinâmica.</p>",
             "<p>O Serviço de Cardiologia foi criado, no HMTJ, em 2013, com o início do funcionamento da residência de Cardiologia. Credenciada pelo MEC (Ministério da Educação) e Sociedade Brasileira de Cardiologia, a Residência forma profissionais qualificados ao atendimento da população como uma visão ampla da especialidade e já foram formados, desde então, 18 novos cardiologistas no HMTJ. </p>",
             "<p>A estrutura do hospital disponibiliza 290 leitos de internação, sendo 40 de UTI Adulto, 12 de UTI Neonatal e oito pediátricos. O Hospital disponibiliza de Serviço de Ecocardiografia (Transtorácico, Estresse e Esofágico), Teste ergométrico, Ultrassonografia, além de moderna estrutura para exames de imagem (Ressonância Magnégica, Tomografia Computadorizada e Raios-X). O Serviço de Fisioterapia atende aos pacientes hospitalizados e presta atendimento ambulatorial nas suas diversas especialidades, com Serviço de Reabilitação Cardíaca direcionado aos pacientes cardiopatas que passam pela Instituição.</p>",
-            "<p>O HMTJ atende pacientes do SUS de todas as faixas etárias, em regime ambulatorial e internação, sendo escolhido futuro centro de referência para cirurgia cardíaca pediátrica na região. Na condição de hospital filantrópico, presta relevantes serviços à comunidade local. É um campo de estágio importante para a formação de aluno pelo tipo de paciente atendido e por ser referência na área do SUS em todas as áreas de Clinica Médica. Suas parcerias, com destaque para o convênio que tem com a Faculdade de Ciências Médicas da Saúde (FCMS/JF – Suprema) desde 2005, propiciam a desenvolver atividades de ensino, pesquisa e extensão, em condições que se aproximam da excelência na qualidade dos cursos da área da saúde, aglutinando diferentes campos de prática, que envolvem Unidades de atendimento primário, secundário e terciário à saúde contemplando diferentes segmentos e grupos populacionais.</p>",
+            "<p>O HMTJ atende pacientes do SUS de todas as faixas etárias, em regime ambulatorial e internação, sendo escolhido futuro centro de referência para cirurgia cardíaca pediátrica na região. Na condição de hospital filantrópico, presta relevantes serviços à comunidade local. É um campo de estágio importante para a formação de aluno pelo tipo de paciente atendido e por ser referência na área do SUS em todas as áreas de Clinica Médica. Suas parcerias, com destaque para o convênio que tem com a Faculdade de Ciências Médicas da Saúde (FCMS/JF - Suprema) desde 2005, propiciam a desenvolver atividades de ensino, pesquisa e extensão, em condições que se aproximam da excelência na qualidade dos cursos da área da saúde, aglutinando diferentes campos de prática, que envolvem Unidades de atendimento primário, secundário e terciário à saúde contemplando diferentes segmentos e grupos populacionais.</p>",
             "<p>O Hospital também é, atualmente, Centro de Referência no Tratamento de Acidente Vascular Cerebral na cidade de Juiz de Fora.</p>",
             "<h2 class='fst-italic mb-2'>Ambulatórios</h2>",
             "<p>O Ambulatório de Especialidades do HMTJ atende à população com cerca de 40 especialidades médicas, Enfermagem, Fisioterapia e atividades do Serviço de Psicologia e do Serviço Social. Além de participar dos programas sanitários e de assistência, o Ambulatório tem por finalidade principal oferecer a prática e o aprendizado aos estudantes da área da saúde, em nível de graduação e pós-graduação. Na Cardiologia, os ambulatórios abrangem as triagens de Pediatria, Hipertensão, Arritmia e Cirurgia Cardíaca.</p>",
@@ -164,13 +164,13 @@ const especialidades = [
         ]
     },
     {
-        "title": "CENTRAL DE MATERIAL ESTERILIZADO – CME",
+        "title": "CENTRAL DE MATERIAL ESTERILIZADO - CME",
         "pageId": "central-de-material-esterilizado-cme",
         "content": [
             "<p>A Central de Material e Esterilização (CME) é uma unidade de apoio técnico dentro do estabelecimento de saúde destinada a receber material considerado sujo e contaminado. Sua função é descontaminá-los, prepará-los e esterilizá-los, bem como, preparar e esterilizar as roupas limpas oriundas da lavanderia e armazenar esses artigos para futura distribuição.</p>",
             "<p>A Resolução RDC nº. 307, de 14 de novembro de 2002, define que sua finalidade o fornecimento de materiais médico-hospitalares adequadamente processados, proporcionando, assim, condições para o atendimento direto e a assistência à saúde dos indivíduos enfermos e sadios.</p>",
             "<p>Para readequar os processos às evoluções nos métodos que garantem a qualidade da esterilização, o HMTJ implantou os requisitos da RDC Nº 15, DE 15 DE MARÇO DE 2012 que dispõe sobre boas práticas para o processamento de produtos para saúde.</p>",
-            "<p>A CME do Hosptial e Maternidade Therezinha de Jesus funciona nas 24 horas com pessoal técnico treinado dentro destas boas práticas que compõem seu processo de trabalho. Possui autoclaves a vapor de fluxo unidirecional – com componentes de barreira, proporcionando ao processo uma porta de entrada (de material contaminado) diferente da de saída (de material estéril). Toda a estrutura foi ampliada e redimensionada para receber também uma lavadora ultrassônica que possui parâmetro de alto nível, com programação que permite lavar instrumentais e materiais de luz, os chamados canulados. O equipamento conta com sistema de dosagem de detergente enzimático automático. E para garantir o processo completo, a CME comporta ainda uma termodesinfectora – para materiais sensíveis -, além de uma secadora de canulados.</p>"
+            "<p>A CME do Hosptial e Maternidade Therezinha de Jesus funciona nas 24 horas com pessoal técnico treinado dentro destas boas práticas que compõem seu processo de trabalho. Possui autoclaves a vapor de fluxo unidirecional - com componentes de barreira, proporcionando ao processo uma porta de entrada (de material contaminado) diferente da de saída (de material estéril). Toda a estrutura foi ampliada e redimensionada para receber também uma lavadora ultrassônica que possui parâmetro de alto nível, com programação que permite lavar instrumentais e materiais de luz, os chamados canulados. O equipamento conta com sistema de dosagem de detergente enzimático automático. E para garantir o processo completo, a CME comporta ainda uma termodesinfectora - para materiais sensíveis -, além de uma secadora de canulados.</p>"
         ],
         "images": [
             "https://hmtj.org.br/wp-content/uploads/2022/01/maternidade-01.jpg",
@@ -181,7 +181,7 @@ const especialidades = [
         "title": "CENTRO CIRÚRGICO",
         "pageId": "centro-cirurgico",
         "content": [
-            "<p>Atualmente, o Centro Cirúrgico conta com 08 salas de cirurgia e uma sala de recuperação pós-anestésica – SRPA, com 08 leitos. Possui arsenal para guarda de material estéril, posto e sala de enfermagem, lavabos, expurgo, vestiários feminino e masculino ambos com barreiras, e sala de conforto para a equipe.</p>",
+            "<p>Atualmente, o Centro Cirúrgico conta com 08 salas de cirurgia e uma sala de recuperação pós-anestésica - SRPA, com 08 leitos. Possui arsenal para guarda de material estéril, posto e sala de enfermagem, lavabos, expurgo, vestiários feminino e masculino ambos com barreiras, e sala de conforto para a equipe.</p>",
             "<p>Atendemos a cirurgias de pequeno, médio porte e grande porte, além de endoscopia, colonoscopia e cirurgias ambulatoriais. Recebemos pacientes eletivos encaminhados pelo SUSFácil, com guias previamente autorizadas e agendados com antecedência mínima de 24h; clientes encaminhados pela Central de Leitos, transferidos de outros setores: UTI adulto, enfermarias, leitos obstétricos e emergência em obstetrícia e ginecologia.</p>"
         ],
         "images": [
@@ -210,9 +210,9 @@ const especialidades = [
             "<p>Médicos de todo o país fazem estágio clínico como parte de requisito necessário para a formação de especialista em alergia. O Serviço de Alergia, Asma e Imunologia do HMTJ dá uma grande contribuição ao ensino médico e ao sistema de saúde formando especialistas nesta área onde há grande carência de profissionais.</p>",
             "<p>A equipe de médicos professores coordenada pelo Dr. Fernando Aarestrup no Serviço, também é composta por um corpo clínico de especialistas renomados: Dr. Roberto de Magalhães de Souza Lima, Dr. Luiz Cláudio Pereira Fernandes, Dr. Eduardo de Magalhães de Souza Lima e Dra. Ingrid Pimentel Cunha Magalhães de Souza Lima. No atendimento aos pacientes, diversos residentes ajudam no atendimento aos pacientes e nos testes alérgicos, sempre orientados e acompanhados de perto pelos professores.</p>",
             "<h2 class='fst-italic mb-2'>URTICÁRIAS</h2>",
-            "<p>Em Juiz de Fora, o Centro de Diagnóstico de Tratamento de Urticária – que compõe a rede mundial UCARE (https://www.ga2len-ucare.com), possui duas unidades para atender a públicos distintos. O atendimento aos usuários do Sistema Único de Saúde (SUS) funciona no ambulatório do Serviço de Alergia e Imunologia do Hospital Maternidade Therezinha de Jesus (HMTJ), que fica na Rua Dr. Dirceu de Andrade, 33, São Mateus. Os pacientes da rede privada de saúde são atendidos na Clínica de Alergia do Centro Médico Monte Sinai (Avenida Presidente Itamar Franco, 4001, Cascatinha, na sala 515, torre Leste).</p>",
+            "<p>Em Juiz de Fora, o Centro de Diagnóstico de Tratamento de Urticária - que compõe a rede mundial UCARE (https://www.ga2len-ucare.com), possui duas unidades para atender a públicos distintos. O atendimento aos usuários do Sistema Único de Saúde (SUS) funciona no ambulatório do Serviço de Alergia e Imunologia do Hospital Maternidade Therezinha de Jesus (HMTJ), que fica na Rua Dr. Dirceu de Andrade, 33, São Mateus. Os pacientes da rede privada de saúde são atendidos na Clínica de Alergia do Centro Médico Monte Sinai (Avenida Presidente Itamar Franco, 4001, Cascatinha, na sala 515, torre Leste).</p>",
             "<p>O Centro trata urticárias agudas (causadas por medicações, estresse ou outro tipo de influência externa) e urticárias crônicas (aquelas que se manifestam por mais de seis semanas, diminuem a qualidade de vida do paciente e não surgem por nenhum tipo de gatilho externo).</p>",
-            "<p>AGENDAMENTO – Para ter acesso às consultas, os usuários da rede pública precisam agendar por meio do SUS. Os interessados devem procurar a Unidade Básica de Saúde (UBS) mais próxima e pedir o encaminhamento para marcação de horário na Maternidade Therezinha de Jesus.</p>",
+            "<p>AGENDAMENTO - Para ter acesso às consultas, os usuários da rede pública precisam agendar por meio do SUS. Os interessados devem procurar a Unidade Básica de Saúde (UBS) mais próxima e pedir o encaminhamento para marcação de horário na Maternidade Therezinha de Jesus.</p>",
             "<p>No ato da consulta, é preciso apresentar documento de identidade com foto, como a carteira de identidade e também o Cartão do SUS.</p>",
             "<p>Para mais informações, os interessados devem se informar na própria UBS.</p>"
         ],
@@ -234,7 +234,7 @@ const especialidades = [
             "<p>O número de obesos no mundo cresce a cada ano e a gastroplastia, também chamada de cirurgia bariátrica ou cirurgia de redução de estômago, vem se tornando uma importante aliada no tratamento de pacientes com obesidade mórbida. A cirurgia é indicada para pessoas com Índice de Massa Corporal (IMC) elevado, igual ou maior a 40 kg/m2, ou entre 35 e 40 kg/m2 na presença de doenças associadas à obesidade, como hipertensão, diabetes dentre outras, e que tenham apresentado falha na perda de peso com tratamento clínico por no mínimo 2 anos.</p>",
             "<p>O Hospital e Maternidade Therezinha de Jesus é credenciado pelo Sistema Único de Saúde (SUS) para realizar cirurgias bariátricas em Juiz de Fora desde julho de 2009, num projeto do Governo Federal coordenado pelo Estado. A iniciativa prevê avaliação e acompanhamento multidisciplinar envolvendo vários profissionais além do próprio cirurgião, como endocrinologista, nutricionista, psicóloga, assistente social, fisioterapeutas e enfermeiros. </p>",
             "<p>O Serviço de Cirurgia Bariátrica do HMTJ atualmente tem como meta realizar, em média, oito cirurgias por mês, sendo realizadas por via convencional, ou seja, aberta. O tipo de cirurgia bariátrica mais realizada no HMTJ é o Bypass Gástrico em Y de Roux, considerada uma técnica mista, em que se faz a redução do tamanho do estômago, e também um desvio intestinal para, além da redução da ingestão, haver também a diminuição da absorção dos alimentos.</p>",
-            "<p>O paciente interessado em realizar a cirurgia pelo SUS no HMTJ deve inicialmente agendar uma consulta com o clínico geral na Unidade Básica de Saúde (UBS) do bairro em que reside. A partir do primeiro atendimento por um clínico geral, o paciente será encaminhado para a endocrinologista do HMTJ, para uma avaliação criteriosa. O agendamento desta consulta é realizado via Central de Marcação de Consultas – CMC, na própria UBS ou Secretaria de Saúde da cidade em que reside.</p>",
+            "<p>O paciente interessado em realizar a cirurgia pelo SUS no HMTJ deve inicialmente agendar uma consulta com o clínico geral na Unidade Básica de Saúde (UBS) do bairro em que reside. A partir do primeiro atendimento por um clínico geral, o paciente será encaminhado para a endocrinologista do HMTJ, para uma avaliação criteriosa. O agendamento desta consulta é realizado via Central de Marcação de Consultas - CMC, na própria UBS ou Secretaria de Saúde da cidade em que reside.</p>",
             "<p>Agendada a consulta no HMTJ, o paciente comparecerá ao Hospital para avaliação com a médica endocrinologista, que irá verificar se o paciente tem o interesse e se apresenta indicação para a realização do procedimento. Se o candidato não manifestar o desejo ou se houver qualquer tipo de contra-indicação, ele deverá ser excluído do programa. Confirmada a indicação para a cirurgia, a endocrinologista encaminhará o paciente para realização de exames pré-operatórios e para avaliação de toda a equipe multidisciplinar.</p>",
             "<p>Após passar por avaliação cardiológica, pneumológica e psicológica, o paciente é entrevistado também por profissionais da Nutrição e Serviço Social. Na sequência, volta aos cuidados da endocrinologista, para avaliação dos resultados dos exames e análise das opiniões de toda a equipe. Se toda a equipe considerar o paciente apto, ele passará pela consulta com o cirurgião, Dr. Victor Cangussu, que explicará sobre as técnicas disponíveis e demais detalhes da cirurgia.</p>",
             "<p>A equipe de Cirurgia Bariátrica ainda conta com o suporte de uma enfermeira dedicada ao Serviço. Ela entrevista, orienta, realiza a triagem das demandas e é responsável pela organização de documentos e assuntos pertinentes às cirurgias, desde o agendamento até orientações ao acompanhante no período de internação.</p>",
@@ -1672,4 +1672,160 @@ const conteudo = [
     }
 ]
 
-module.exports = { conteudo, especialidades, processo_seletivo }
+const unidades = [
+    {
+        unidade: 996,
+        nome: "AEHCS - AMBULATÓRIO DE ESPECIALIDADES HOSPITAL CLÍNICA SUL",
+        cidade: "São José dos Campos",
+        uf: "SP",
+        apresentacao: `<p>A Organização Social de Saúde Hospital e Maternidade Therezinha de Jesus (OSS HMTJ) assumiu a gestão da UES III (Unidade de Especialidades Sul III) em junho de 2020, dando sequência nos atendimentos ambulatoriais antes prestados na estrutura física do Hospital de Clínicas Sul. A OSS venceu novo processo licitatório no final de 2023 sob contrato de gestão nº 599/2023, através da celebração de convênio para gerenciamento e execução de ações e serviços de saúde com a Secretaria Municipal de Saúde visando. A unidade e realiza, em média, 6 mil atendimentos por mês entre atendimentos médicos das mais diversas especialidades, bem como uma variedade de exames ambulatoriais.</p><p>A Unidade de Especialidades Sul - UES III realiza a assistência aos munícipes baseado na linha de cuidados que representa uma continuidade assistencial composta por ações de promoção, prevenção e tratamento. As consultas são para pacientes clínicos com critérios pré-estabelecidos pelo Departamento de Regulação e Controle (DRC), os agendamentos de primeira consulta são realizados pelo IPPLAN, e os retornos são realizados na própria unidade de acordo com a conduta médica. O horário de funcionamento é das 07h30 às 17h30.</p><p>As especialidades médicas oferecidas incluem Otorrinolaringologia, Urologia, Gastrologia, Cardiologia, Reumatologia, Ortopedia e pequenas cirurgias. Quanto aos exames realizados na unidade, destacam-se audiometria tonal, audiometria vocal, imitanciometria, nasofibroscopia, videolaringoscopia, ecocardiograma, urodinâmica para mulheres, urodinâmica para homens, mapa, holter, teste ergométrico, USG abdômen total, USG próstata via abdômen, USG aparelho urinário, USG próstata c/ biopsia, USG articulação, eletroneuromiografia de 2 e 4 membros, USG doppler colorido venoso 2 membros, USG doppler colorido arterial 2 membros.</p>`,
+        img: "https://fluig.hmtj.org.br:8443/Portal_transparencia_OSS/resources/images/esp996.jpg"
+    }, {
+        unidade: 20,
+        nome: "UPA SANTA LUZIA",
+        cidade: "Juiz de Fora",
+        uf: "MG",
+        apresentacao: "<p>A Unidade de Pronto Atendimento - UPA Santa Luzia iniciou suas atividades em 20 de janeiro de 2010, sendo gerida pela instituição filantrópica Hospital e Maternidade Therezinha de Jesus, sob convenio com a Secretaria de Saúde da Prefeitura Municipal de Juiz de Fora (Portaria nº 1.020, de 13 de maio de 2009, que contempla a criação de unidades de pronto atendimento).</p><p>A Unidade realiza procedimentos de baixa e média complexidade, com ênfase no atendimento de urgência e emergência em Clínica Médica e Pediatria. Também realiza pequenos procedimentos cirúrgicos de urgência, tais como suturas e drenagem de abscessos, entre outros.Disponibiliza atendimentos de urgência 24 horas por dia, ininterruptamente, considerados como tais os não programados. São unidades de atendimento por demanda espontânea e referenciada.</p><p>A UPA Santa Luzia referencia pacientes, após estabilização das condições clínicas, para internação em unidades hospitalares, através da Central de Regulação de Leitos do Município. Disponibiliza leitos de observação em conseqüência dos atendimentos de urgência, por período de até 24 horas, não caracterizando internação hospitalar. Presta assistência utilizando, obrigatoriamente, o Protocolo de Classificação de Risco de Manchester, como determinado pela portaria SES MG 1.924, de 17 de junho de 2009, e seus anexos.</p>",
+        img: "https://fluig.hmtj.org.br:8443/Portal_transparencia_OSS/resources/images/UPA-Santa-Luzia.jpg"
+    }, {
+        unidade: 37,
+        nome: "HOSPITAL MUNICIPAL GEORGES HAJJAR",
+        cidade: "Anápolis",
+        uf: "GO",
+        apresentacao: "<p>Esta seção permite ao cidadão acessar as informações produzidas e/ou custodiadas pela ORGANIZAÇÃO SOCIAL DE SAÚDE - HOSPITAL E MATERNIDADE THEREZINHA DE JESUS (OSS-HMTJ), garantindo o direito constitucional de acesso à informação, regulamentado pela Lei federal n° 12.527/2011, e, em âmbito estadual, pela lei n° 18.025/2013, pela Lei Federal n° 13.019/2014, pelo Decreto n° 10.356/2023 e pela Resolução Normativa nº 04/2025 do Tribunal de Contas do Estado de Goiás.</p>",
+        img: "https://fluig.hmtj.org.br:8443/Portal_transparencia_OSS/resources/images/37.jpg"
+    }, {
+        unidade: 1,
+        nome: "COMPLEXO REGIONAL DA MÃE DE MESQUITA MATERNIDADE E CLÍNICA DA MULHER",
+        cidade: "MESQUITA",
+        uf: "RJ",
+        apresentacao: "<p>A Organização Social de Saúde Hospital e Maternidade Therezinha de Jesus (OSS HMTJ) instituiu em seu site o Portal da Transparência em cumprimento à normativa legal que garante o acesso à informação pública e estabelece a obrigatoriedade dos órgãos públicos e entidade sem fins lucrativos garantirem e divulgarem, independente de solicitação, informações de interesse geral ou coletivo, assegurando a confidencialidade prevista no texto legal.</p><p>Ao longo de sua história, a OSS HMTJ preza pela seriedade e transparência de seu trabalho, que refletem um respeito contínuo aos interesses da população. Os relatórios de prestação de contas apresentados abaixo podem ser identificados pelo nome da unidade, mês e ano. Estão disponíveis também os relatórios de prestação de contas anuais.</p>",
+        img: "https://fluig.hmtj.org.br:8443/Portal_transparencia_OSS/resources/images/mesquita.jpg"
+    }
+]
+
+const editais = [
+    {
+        id: 1,
+        unidade: 996,
+        ano: 2025,
+        categoria: "edital",
+        subcategoria: "001/2025",
+        dtAbertura: "2025-01-01T00:00:00",
+        dtEncerramento: "2025-12-31T00:00:00",
+        publicacoes: {
+            "RESULTADO_DA_ENTREVISTA": [
+                {
+                    "titulo": "RESULTADO DA ENTREVISTA - 1ª CONVOCAÇÃO",
+                    "link": "",
+                    "dtPublicacao": "2025-02-20T13:00:00"
+                }
+            ],
+            "RESULTADO_ETAPA_PROVA_TECNICA": [],
+            "RESULTADO_DA_ETAPA_DE_ENTREVISTA_TECNICA_E_COMPORTAMENTAL": [],
+            "RESULTADO_DA_PRIMEIRA_ETAPA_POS_PEDIDOS_DE_RECONSIDERACAO": [],
+            "CONVOCACAO_PARA_COMITE_DE_INTEGRACAO": [],
+            "CONVOCACAO_PARA_EXAMES_ADMISSIONAIS": [],
+            "CONVOCACAO_PROCESSO_ADMISSIONAL": [],
+            "CONVOCACAO_PARA_PROVA_TECNICA": [],
+            "CONVOCACAO_PARA_ENTREVISTA": [],
+            "CONVOCACAO_PARA_ETAPA_DE_ENTREVISTA_E_COMPORTAMENTAL": [],
+            "ERRATA": [],
+            "COMUNICADO": []
+        }
+    }, {
+        id: 2,
+        unidade: 996,
+        ano: 2025,
+        categoria: "edital",
+        subcategoria: "002/2025",
+        dtAbertura: "2025-01-01T00:00:00",
+        dtEncerramento: "2025-12-31T00:00:00",
+        publicacoes: {
+            "RESULTADO_DA_ENTREVISTA": [
+                {
+                    "titulo": "RESULTADO DA ENTREVISTA - 1ª CONVOCAÇÃO",
+                    "link": "",
+                    "dtPublicacao": "2025-02-20T13:00:00"
+                }
+            ],
+            "RESULTADO_ETAPA_PROVA_TECNICA": [],
+            "RESULTADO_DA_ETAPA_DE_ENTREVISTA_TECNICA_E_COMPORTAMENTAL": [],
+            "RESULTADO_DA_PRIMEIRA_ETAPA_POS_PEDIDOS_DE_RECONSIDERACAO": [],
+            "CONVOCACAO_PARA_COMITE_DE_INTEGRACAO": [],
+            "CONVOCACAO_PARA_EXAMES_ADMISSIONAIS": [],
+            "CONVOCACAO_PROCESSO_ADMISSIONAL": [],
+            "CONVOCACAO_PARA_PROVA_TECNICA": [],
+            "CONVOCACAO_PARA_ENTREVISTA": [],
+            "CONVOCACAO_PARA_ETAPA_DE_ENTREVISTA_E_COMPORTAMENTAL": [],
+            "ERRATA": [],
+            "COMUNICADO": []
+        }
+    }, {
+        id: 3,
+        unidade: 996,
+        ano: 2025,
+        categoria: "edital",
+        subcategoria: "003/2025",
+        dtAbertura: "2025-01-01T00:00:00",
+        dtEncerramento: "2025-05-31T00:00:00",
+        publicacoes: {
+            "RESULTADO_DA_ENTREVISTA": [
+                {
+                    "titulo": "RESULTADO DA ENTREVISTA - 1ª CONVOCAÇÃO",
+                    "link": "",
+                    "dtPublicacao": "2025-02-20T13:00:00"
+                }
+            ],
+            "RESULTADO_ETAPA_PROVA_TECNICA": [],
+            "RESULTADO_DA_ETAPA_DE_ENTREVISTA_TECNICA_E_COMPORTAMENTAL": [],
+            "RESULTADO_DA_PRIMEIRA_ETAPA_POS_PEDIDOS_DE_RECONSIDERACAO": [],
+            "CONVOCACAO_PARA_COMITE_DE_INTEGRACAO": [],
+            "CONVOCACAO_PARA_EXAMES_ADMISSIONAIS": [],
+            "CONVOCACAO_PROCESSO_ADMISSIONAL": [],
+            "CONVOCACAO_PARA_PROVA_TECNICA": [],
+            "CONVOCACAO_PARA_ENTREVISTA": [],
+            "CONVOCACAO_PARA_ETAPA_DE_ENTREVISTA_E_COMPORTAMENTAL": [],
+            "ERRATA": [],
+            "COMUNICADO": []
+        }
+    }
+]
+
+const transparencia = [
+    {
+        id: 1,
+        unidade: 996,
+        ano: 2025,
+        publicacoes: {
+            "CERTIFICADO DE REGULARIDADE DO FGTS": [],
+            "COMPROVANTE DE INSCRIÇÃO E DE SITUAÇÃO CADASTRAL": [],
+            "CONTRATO DE GESTÃO": [],
+            "CONTRATO DE GESTÃO E ADITIVOS": [],
+            "CONTRATOS CANCELADOS": [],
+            "CONTRATOS VIGENTE": [],
+            "DOCUMENTOS COMPROBATÓRIOS - NOTAS FISCAIS": [],
+            "NOTAS FISCAIS - CENTRAL DE SERVIÇOS": [],
+            "POLÍTICAS INSTITUCIONAIS": [],
+            "PRESTAÇÃO DE CONTAS MENSAL": []
+        }
+    }, {
+        id: 2,
+        unidade: 996,
+        ano: 2024,
+        publicacoes: {
+            "CERTIFICADO DE REGULARIDADE DO FGTS": [],
+            "COMPROVANTE DE INSCRIÇÃO E DE SITUAÇÃO CADASTRAL": [],
+            "CONTRATO DE GESTÃO": [],
+            "CONTRATO DE GESTÃO E ADITIVOS": [],
+            "CONTRATOS CANCELADOS": [],
+            "CONTRATOS VIGENTE": [],
+            "DOCUMENTOS COMPROBATÓRIOS - NOTAS FISCAIS": [],
+            "NOTAS FISCAIS - CENTRAL DE SERVIÇOS": [],
+            "POLÍTICAS INSTITUCIONAIS": [],
+            "PRESTAÇÃO DE CONTAS MENSAL": []
+        }
+    }
+]
+
+module.exports = { conteudo, especialidades, processo_seletivo, unidades, editais, transparencia }

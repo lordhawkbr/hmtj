@@ -4,16 +4,17 @@
             <div class="row my-3">
                 <div class="col-12">
                     <div class="jumbo_unidade">
-                        <img src="https://assets.mayoclinic.org/content/dam/media/global/images/2024/03/08/photo_campus_minnesota-campus-courtyard-gonda_1296x555.jpg"
-                            alt="" class="img-fluid rounded-4">
+                        <img src="<%= unidade.img %>" alt="" class="img-fluid rounded-4">
                     </div>
                 </div>
                 <div class="col-12">
-                    <h1 class="my-3">Unidade X</h1>
-                    <p class="my-3"><i class="bi bi-geo-alt-fill"></i> Cidade/UF</p>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem fugiat distinctio
-                        consequatur omnis possimus dolorum. Excepturi facilis magni voluptate non error cumque officia
-                        molestiae, deserunt est consectetur, velit aliquid sapiente!</p>
+                    <h1 class="my-3">
+                        <%= unidade.nome %>
+                    </h1>
+                    <p class="my-3"><i class="bi bi-geo-alt-fill"></i>
+                        <%= unidade.cidade %>/<%= unidade.uf %>
+                    </p>
+                    <p class="lead"><%- unidade.apresentacao %></p>
                 </div>
             </div>
             <div class="row my-3 justify-content-center section-height">
@@ -24,33 +25,25 @@
                 </div>
                 <div class="col-12 col-lg-8 mb-4">
                     <ul class="nav nav-tabs nav-pills nav-fill justify-content-center" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link custom-hover" id="2023-tab" data-bs-toggle="tab" data-bs-target="#2023"
-                                type="button" role="tab" aria-controls="2023" aria-selected="false">2023</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link custom-hover" id="2024-tab" data-bs-toggle="tab" data-bs-target="#2024"
-                                type="button" role="tab" aria-controls="2024" aria-selected="false">2024</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link custom-hover active" id="2025-tab" data-bs-toggle="tab" data-bs-target="#2025"
-                                type="button" role="tab" aria-controls="2025" aria-selected="true">2025</button>
-                        </li>
+                        <% transparencia.forEach(function(item, index) { %>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link custom-hover"
+                                    id="<%= item.ano %>-tab" data-bs-toggle="tab" data-bs-target="#<%= item.ano %>">
+                                    <%= item.ano %>
+                                </button>
+                            </li>
+                            <% }) %>
                     </ul>
                     <div class="tab-content py-3">
-                        <div class="tab-pane" id="2023" role="tabpanel" aria-labelledby="2023-tab" tabindex="0">
-                            <h3>2023</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem sequi in id autem
-                                maxime cupiditate nulla, beatae, maiores doloribus velit quidem quam nisi eveniet
-                                voluptatum cumque. Quaerat, exercitationem! Officiis, quibusdam.</p>
-                        </div>
-                        <div class="tab-pane" id="2024" role="tabpanel" aria-labelledby="2024-tab" tabindex="0">
-                            <h3>2024</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem sequi in id autem
-                                maxime cupiditate nulla, beatae, maiores doloribus velit quidem quam nisi eveniet
-                                voluptatum cumque. Quaerat, exercitationem! Officiis, quibusdam.</p>
-                        </div>
-                        <div class="tab-pane active" id="2025" role="tabpanel" aria-labelledby="2025-tab" tabindex="0">
+                        <% transparencia.forEach(function(item, index) { %>
+                            <div class="tab-pane" id="<%= item.ano %>" role="tabpanel"
+                                aria-labelledby="<%= item.ano %>-tab" tabindex="0">
+                                <h3>
+                                    <%= item.ano %>
+                                </h3>
+                            </div>
+                            <% }) %>
+                                <!-- <div class="tab-pane active" id="2025" role="tabpanel" aria-labelledby="2025-tab" tabindex="0">
                             <div class="row">
                                 <div class="col-6">
                                     <div class="accordion" id="accordion_1">
@@ -191,7 +184,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -228,25 +221,33 @@
                 <div class="col-6 col-lg-4 mb-4">
                     <h5 class="section-title text-success">Em aberto</h5>
                     <ul class="list-group list-group-flush list-group-unidades">
-                        <li class="list-group-item">
-                            <a class="d-flex align-items-center gap-2 text-decoration-none custom-hover"
-                                href="/processo_seletivo/1">
-                                <i class="bi bi-chevron-right text-primary icon-move"></i>
-                                <span>Edital 002/2025</span>
-                            </a>
-                        </li>
+                        <% editais.filter(e=> new Date(e.dtEncerramento.split("T")[0]) <= new Date()).forEach(e=> { %>
+                                <li class="list-group-item">
+                                    <a class="d-flex align-items-center gap-2 text-decoration-none custom-hover"
+                                        href="/processo_seletivo/<%= e.id %>">
+                                        <i class="bi bi-chevron-right text-primary icon-move"></i>
+                                        <span>
+                                            <%= e.subcategoria %>
+                                        </span>
+                                    </a>
+                                </li>
+                                <% }) %>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-4 mb-4">
                     <h5 class="section-title text-danger">Encerrados</h5>
                     <ul class="list-group list-group-flush list-group-unidades">
-                        <li class="list-group-item">
-                            <a class="d-flex align-items-center gap-2 text-decoration-none custom-hover"
-                                href="/processo_seletivo/1">
-                                <i class="bi bi-chevron-right text-primary icon-move"></i>
-                                <span>Edital 001/2025</span>
-                            </a>
-                        </li>
+                        <% editais.filter(e=> new Date(e.dtEncerramento.split("T")[0]) > new Date()).forEach(e => { %>
+                            <li class="list-group-item">
+                                <a class="d-flex align-items-center gap-2 text-decoration-none custom-hover"
+                                    href="/processo_seletivo/<%= e.id %>">
+                                    <i class="bi bi-chevron-right text-primary icon-move"></i>
+                                    <span>
+                                        <%= e.subcategoria %>
+                                    </span>
+                                </a>
+                            </li>
+                            <% }) %>
                     </ul>
                 </div>
             </div>

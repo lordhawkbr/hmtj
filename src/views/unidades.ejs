@@ -7,67 +7,85 @@
                     <p class="mb-4">Conheça todas as unidades de saúde gerenciadas pela OSS HMTJ.</p>
                     <div class="mb-4 filtro-estado d-flex gap-2 flex-wrap">
                         <button class="btn btn-destaque activeBtn" data-estado="todos">TODOS</button>
-                        <button class="btn btn-destaque" data-estado="mg">MG</button>
-                        <button class="btn btn-destaque" data-estado="rj">RJ</button>
-                        <button class="btn btn-destaque" data-estado="sp">SP</button>
-                        <button class="btn btn-destaque" data-estado="go">GO</button>
+                        <% ufUnidades.forEach(function(item, index) { %>
+                            <button class="btn btn-destaque" data-estado="<%= item %>">
+                                <%= item %>
+                            </button>
+                            <% }) %>
                     </div>
                 </div>
             </div>
             <div id="cards-container">
                 <div class="row">
-                    <div class="col-md-3 col-xs-6 my-2 unidades unidades_mg">
-                        <div class="card">
-                            <img src="https://hmtj.org.br/wp-content/uploads/2024/05/heapa-cf1-1.jpeg"
-                                class="card-img-top img-fluid" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    <i class="bi bi-geo-alt-fill"></i> Cidade/UF
-                                </p>
-                                <a href="/unidades/1" class="btn btn-destaque">Acessar portal</a>
+                    <% unidadesData.forEach(function(item, index) { %>
+                        <div class="col-lg-3 col-md-6 col-12 my-2 unidades unidades_<%= item.uf %>">
+                            <div class="card">
+                                <img src="<%= item.img %>" class="card-img-top img-fluid" alt="<%= item.nome %>">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%= item.nome %>
+                                    </h5>
+                                    <p class="card-text">
+                                        <i class="bi bi-geo-alt-fill"></i> <%= item.cidade %>/<%= item.uf %>
+                                    </p>
+                                    <a href="/unidade/<%= item.unidade %>" class="btn btn-destaque">Acessar portal</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-xs-6 my-2 unidades unidades_rj">
-                        <div class="card">
-                            <img src="https://hmtj.org.br/wp-content/uploads/2024/05/heapa-cf1-1.jpeg"
-                                class="card-img-top img-fluid" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    <i class="bi bi-geo-alt-fill"></i> Cidade/UF
-                                </p>
-                                <a href="/unidades/1" class="btn btn-destaque">Acessar portal</a>
+                        <% }) %>
+
+                            <!-- <div class="col-md-3 col-xs-6 my-2 unidades unidades_mg">
+                                <div class="card">
+                                    <img src="https://hmtj.org.br/wp-content/uploads/2024/05/heapa-cf1-1.jpeg"
+                                        class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            <i class="bi bi-geo-alt-fill"></i> Cidade/UF
+                                        </p>
+                                        <a href="/unidade/1" class="btn btn-destaque">Acessar portal</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-xs-6 my-2 unidades unidades_sp">
-                        <div class="card">
-                            <img src="https://hmtj.org.br/wp-content/uploads/2024/05/heapa-cf1-1.jpeg"
-                                class="card-img-top img-fluid" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    <i class="bi bi-geo-alt-fill"></i> Cidade/UF
-                                </p>
-                                <a href="/unidades/1" class="btn btn-destaque">Acessar portal</a>
+                            <div class="col-md-3 col-xs-6 my-2 unidades unidades_rj">
+                                <div class="card">
+                                    <img src="https://hmtj.org.br/wp-content/uploads/2024/05/heapa-cf1-1.jpeg"
+                                        class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            <i class="bi bi-geo-alt-fill"></i> Cidade/UF
+                                        </p>
+                                        <a href="/unidade/1" class="btn btn-destaque">Acessar portal</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-xs-6 my-2 unidades unidades_go">
-                        <div class="card">
-                            <img src="https://hmtj.org.br/wp-content/uploads/2024/05/heapa-cf1-1.jpeg"
-                                class="card-img-top img-fluid" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    <i class="bi bi-geo-alt-fill"></i> Cidade/UF
-                                </p>
-                                <a href="/unidades/1" class="btn btn-destaque">Acessar portal</a>
+                            <div class="col-md-3 col-xs-6 my-2 unidades unidades_sp">
+                                <div class="card">
+                                    <img src="https://hmtj.org.br/wp-content/uploads/2024/05/heapa-cf1-1.jpeg"
+                                        class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            <i class="bi bi-geo-alt-fill"></i> Cidade/UF
+                                        </p>
+                                        <a href="/unidade/1" class="btn btn-destaque">Acessar portal</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                            <div class="col-md-3 col-xs-6 my-2 unidades unidades_go">
+                                <div class="card">
+                                    <img src="https://hmtj.org.br/wp-content/uploads/2024/05/heapa-cf1-1.jpeg"
+                                        class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            <i class="bi bi-geo-alt-fill"></i> Cidade/UF
+                                        </p>
+                                        <a href="/unidade/1" class="btn btn-destaque">Acessar portal</a>
+                                    </div>
+                                </div>
+                            </div> -->
                 </div>
             </div>
         </main>
