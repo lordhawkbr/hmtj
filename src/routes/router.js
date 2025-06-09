@@ -13,13 +13,12 @@ router.get("/unidade/:id?", (req, res) => {
     if (!unidadeData) {
         return res.redirect("/");
     }
-    console.log(transparenciaData)
     res.render("unidade", { unidade: unidadeData, editais: editaisData, transparencia: transparenciaData });
 });
 
 router.get("/page/:id", (req, res, next) => {
     const pageId = req.params.id;
-    const page = pages.find(item => item.pageId === pageId);
+    const page = pages.conteudo.find(item => item.pageId === pageId);
     if (page) {
         res.render("page", { page });
     } else {
@@ -29,15 +28,20 @@ router.get("/page/:id", (req, res, next) => {
 
 router.get("/:id?", (req, res) => {
     const page = req.params.id;
-    if (!page) return res.render("main");
+
+    if (!page) {
+        const unidadesData = pages.unidades;
+        return res.render("main", { unidades: unidadesData });
+    }
+
     const viewPath = path.join(__dirname, "..", "views", `${page}.ejs`);
     fs.access(viewPath, fs.constants.F_OK, (err) => {
         if (err) {
             res.redirect("/");
         } else {
-            if (page == "unidades") {
-                const unidadesData = pages.unidades
-                const ufUnidades = Array.from(new Set(unidadesData.map(item => item.uf)))
+            if (page === "unidades") {
+                const unidadesData = pages.unidades;
+                const ufUnidades = Array.from(new Set(unidadesData.map(item => item.uf)));
                 res.render(page, { unidadesData, ufUnidades });
             } else {
                 res.render(page);
@@ -48,7 +52,6 @@ router.get("/:id?", (req, res) => {
 
 router.get("/processo_seletivo/:id", (req, res, next) => {
     const pageId = req.params.id;
-    // const page = pageId ? pages.find(item => item.pageId === pageId) : false
     res.render("processo_seletivo", { result: pages.processo_seletivo });
 })
 

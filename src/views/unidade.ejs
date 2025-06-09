@@ -27,164 +27,91 @@
                     <ul class="nav nav-tabs nav-pills nav-fill justify-content-center" id="myTab" role="tablist">
                         <% transparencia.forEach(function(item, index) { %>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link custom-hover"
-                                    id="<%= item.ano %>-tab" data-bs-toggle="tab" data-bs-target="#<%= item.ano %>">
+                                <button class="nav-link custom-hover <%= index === transparencia.length - 1 ? 'active' : '' %>" id="<%= item.ano %>-tab" data-bs-toggle="tab"
+                                    data-bs-target="#<%= item.ano %>">
                                     <%= item.ano %>
                                 </button>
                             </li>
                             <% }) %>
                     </ul>
                     <div class="tab-content py-3">
-                        <% transparencia.forEach(function(item, index) { %>
+                        <% transparencia.forEach(function(item) { const entries=Object.entries(item.publicacoes); const
+                            metade=Math.ceil(entries.length / 2); const primeiraColuna=entries.slice(0, metade); const
+                            segundaColuna=entries.slice(metade); %>
                             <div class="tab-pane" id="<%= item.ano %>" role="tabpanel"
                                 aria-labelledby="<%= item.ano %>-tab" tabindex="0">
-                                <h3>
-                                    <%= item.ano %>
-                                </h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="accordion" id="accordion_esq_<%= item.ano %>">
+                                            <% primeiraColuna.forEach(function([titulo, documentos], index) { %>
+                                                <div class="accordion-item">
+                                                    <p class="accordion-header">
+                                                        <button class="accordion-button collapsed custom-hover"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#clp<%= item.ano %>_esq<%= index %>"
+                                                            aria-expanded="false"
+                                                            aria-controls="clp<%= item.ano %>_esq<%= index %>">
+                                                            <%= titulo %>
+                                                        </button>
+                                                    </p>
+                                                    <div id="clp<%= item.ano %>_esq<%= index %>"
+                                                        class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordion_esq_<%= item.ano %>">
+                                                        <div class="accordion-body">
+                                                            <% if (documentos.length> 0) { %>
+                                                                <ul>
+                                                                    <% documentos.forEach(function(doc) { %>
+                                                                        <li>
+                                                                            <%= doc %>
+                                                                        </li>
+                                                                        <% }) %>
+                                                                </ul>
+                                                                <% } else { %>
+                                                                    <em>Sem documentos publicados.</em>
+                                                                    <% } %>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <% }) %>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="accordion" id="accordion_dir_<%= item.ano %>">
+                                            <% segundaColuna.forEach(function([titulo, documentos], index) { %>
+                                                <div class="accordion-item">
+                                                    <p class="accordion-header">
+                                                        <button class="accordion-button collapsed custom-hover"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#clp<%= item.ano %>_dir<%= index %>"
+                                                            aria-expanded="false"
+                                                            aria-controls="clp<%= item.ano %>_dir<%= index %>">
+                                                            <%= titulo %>
+                                                        </button>
+                                                    </p>
+                                                    <div id="clp<%= item.ano %>_dir<%= index %>"
+                                                        class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordion_dir_<%= item.ano %>">
+                                                        <div class="accordion-body">
+                                                            <% if (documentos.length> 0) { %>
+                                                                <ul>
+                                                                    <% documentos.forEach(function(doc) { %>
+                                                                        <li>
+                                                                            <%= doc %>
+                                                                        </li>
+                                                                        <% }) %>
+                                                                </ul>
+                                                                <% } else { %>
+                                                                    <em>Sem documentos publicados.</em>
+                                                                    <% } %>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <% }) %>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <% }) %>
-                                <!-- <div class="tab-pane active" id="2025" role="tabpanel" aria-labelledby="2025-tab" tabindex="0">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="accordion" id="accordion_1">
-                                        <div class="accordion-item">
-                                            <p class="accordion-header">
-                                                <button class="accordion-button collapsed custom-hover" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                    aria-expanded="false" aria-controls="collapseOne">
-                                                    CERTIFICADO DE REGULARIDADE DO FGTS
-                                                </button>
-                                            </p>
-                                            <div id="collapseOne" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordion_1">
-                                                <div class="accordion-body"></div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <p class="accordion-header">
-                                                <button class="accordion-button collapsed custom-hover" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                    aria-expanded="false" aria-controls="collapseTwo">
-                                                    COMPROVANTE DE INSCRIÇÃO E DE SITUAÇÃO CADASTRAL
-                                                </button>
-                                            </p>
-                                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordion_1">
-                                                <div class="accordion-body"></div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <p class="accordion-header">
-                                                <button class="accordion-button collapsed custom-hover" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                    aria-expanded="false" aria-controls="collapseThree">
-                                                    CONTRATO DE GESTÃO
-                                                </button>
-                                            </p>
-                                            <div id="collapseThree" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordion_1">
-                                                <div class="accordion-body"></div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <p class="accordion-header">
-                                                <button class="accordion-button collapsed custom-hover" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTen"
-                                                    aria-expanded="false" aria-controls="collapseTen">
-                                                    CONTRATO DE GESTÃO E ADITIVOS
-                                                </button>
-                                            </p>
-                                            <div id="collapseTen" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordion_1">
-                                                <div class="accordion-body"></div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <p class="accordion-header">
-                                                <button class="accordion-button collapsed custom-hover" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                                    aria-expanded="false" aria-controls="collapseFour">
-                                                    CONTRATOS CANCELADOS
-                                                </button>
-                                            </p>
-                                            <div id="collapseFour" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordion_1">
-                                                <div class="accordion-body"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="accordion" id="accordion_2">
-                                        <div class="accordion-item">
-                                            <p class="accordion-header">
-                                                <button class="accordion-button collapsed custom-hover" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                                                    aria-expanded="false" aria-controls="collapseFive">
-                                                    CONTRATOS VIGENTE
-                                                </button>
-                                            </p>
-                                            <div id="collapseFive" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordion_2">
-                                                <div class="accordion-body"></div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <p class="accordion-header">
-                                                <button class="accordion-button collapsed custom-hover" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseSix"
-                                                    aria-expanded="false" aria-controls="collapseSix">
-                                                    DOCUMENTOS COMPROBATÓRIOS - NOTAS FISCAIS
-                                                </button>
-                                            </p>
-                                            <div id="collapseSix" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordion_2">
-                                                <div class="accordion-body"></div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <p class="accordion-header">
-                                                <button class="accordion-button collapsed custom-hover" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseSeven"
-                                                    aria-expanded="false" aria-controls="collapseSeven">
-                                                    NOTAS FISCAIS - CENTRAL DE SERVIÇOS
-                                                </button>
-                                            </p>
-                                            <div id="collapseSeven" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordion_2">
-                                                <div class="accordion-body"></div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <p class="accordion-header">
-                                                <button class="accordion-button collapsed custom-hover" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseEight"
-                                                    aria-expanded="false" aria-controls="collapseEight">
-                                                    POLÍTICAS INSTITUCIONAIS
-                                                </button>
-                                            </p>
-                                            <div id="collapseEight" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordion_2">
-                                                <div class="accordion-body"></div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <p class="accordion-header">
-                                                <button class="accordion-button collapsed custom-hover" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseNine"
-                                                    aria-expanded="false" aria-controls="collapseNine">
-                                                    PRESTAÇÃO DE CONTAS MENSAL
-                                                </button>
-                                            </p>
-                                            <div id="collapseNine" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordion_2">
-                                                <div class="accordion-body"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>

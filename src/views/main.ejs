@@ -66,7 +66,29 @@
                         <p class="text-body-secondary">Conheça todas as unidades de saúde gerenciadas pela OSS HMTJ.</p>
                         <a href="/unidades" class="btn btn-destaque btn-lg w-50">Confira</a>
                     </div>
-                    <div class="col">
+                    <% unidades.forEach(item=> { %>
+                        <div class="col">
+                            <a href="#" class="text-decoration-none hover-image">
+                                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-2 shadow-lg"
+                                    style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= item.img %>');">
+                                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white">
+                                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                                            <%= item.nome %>
+                                        </h3>
+                                        <ul class="d-flex list-unstyled mt-auto">
+                                            <li class="d-flex align-items-center me-3">
+                                                <i class="bi bi-geo-alt-fill"></i>
+                                                <small>
+                                                    <%= item.cidade %>/<%= item.uf %>
+                                                </small>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <% }) %>
+                            <!-- <div class="col">
                         <a href="#" class="text-decoration-none hover-image">
                             <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-2 shadow-lg"
                                 style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://hmtj.org.br/wp-content/uploads/2024/05/heapa-cf1-1.jpeg');">
@@ -81,26 +103,10 @@
                                 </div>
                             </div>
                         </a>
-                    </div>
-                    <div class="col">
-                        <a href="#" class="text-decoration-none hover-image">
-                            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-2 shadow-lg"
-                                style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://hmtj.org.br/wp-content/uploads/2024/05/heapa-cf1-1.jpeg');">
-                                <div class="d-flex flex-column h-100 p-5 pb-3 text-white">
-                                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">HEAPA</h3>
-                                    <ul class="d-flex list-unstyled mt-auto">
-                                        <li class="d-flex align-items-center me-3">
-                                            <i class="bi bi-geo-alt-fill"></i>
-                                            <small>Local</small>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                    </div> -->
                 </div>
 
-                <div class="row align-items-md-center g-3 py-3">
+                <!-- <div class="row align-items-md-center g-3 py-3">
                     <div class="col">
                         <a href="#" class="text-decoration-none hover-image">
                             <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-2 shadow-lg"
@@ -149,7 +155,7 @@
                             </div>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </section>
 
             <section id="areas_destaque" class="my-5">
