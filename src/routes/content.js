@@ -1827,5 +1827,118 @@ const transparencia = [
         }
     }
 ]
-
-module.exports = { conteudo, especialidades, processo_seletivo, unidades, editais, transparencia }
+const portalTransparencia = [
+    {
+        "categoria": "Qualificação",
+        "subCategoria": [
+            "Requerimento para Obtenção do Título de OS",
+            "Manifestação de Capacidade Técnica da OS",
+            "Manifestação da PGE-GO",
+            "Estudos Técnicos Prévios",
+            "Decisão do Chefe do Poder Executivo"
+        ]
+    },
+    {
+        "categoria": "Informações Gerais",
+        "subCategoria": [
+            "Processo de Chamamento Público e/ou Dispensa",
+            "Termo de Colaboração e/ou Fomento e Aditivos",
+            "Estatuto Social / Regimento Interno",
+            "Organograma",
+            "Competências Previstas nos Termos de Colaboração e/ou Fomento",
+            "Legislação Aplicável",
+            "Membros dos Conselhos de Administração e Fiscal",
+            "Telefones, E-mails, Endereços e Horários de Atendimento",
+            "Atas de Reuniões",
+            "Serviços de Saúde"
+        ]
+    },
+    {
+        "categoria": "Serviços de Informações ao Cidadão (SIC) e Ouvidoria",
+        "subCategoria": [
+            "SIC Físico - Unidades do Vapt Vupt",
+            "Ouvidoria - Atendimento Presencial",
+            "e-SIC Eletrônico",
+            "Relatório Anual de Pedidos de Acesso à Informação",
+            "Lei de Acesso à Informação Estadual",
+            "Relatório de Pedidos de Acesso à Informação(Ouvidor SUS)"
+        ]
+    },
+    {
+        "categoria": "Perguntas e Respostas Frequentes da Sociedade",
+        "subCategoria": [
+            "Perguntas e Respostas Frequentes"
+        ]
+    },
+    {
+        "categoria": "Orçamento",
+        "subCategoria": [
+            "Execução Orçamentária Mensal e Acumulada do Ano"
+        ]
+    },
+    {
+        "categoria": "Patrimônio",
+        "subCategoria": [
+            "Bens Móveis",
+            "Bens Imóveis"
+        ]
+    },
+    {
+        "categoria": "Compras/Contratos",
+        "subCategoria": [
+            "Regulamento de contratação para as Alienações, Aquisições de Bens e Contratações de Obras e Serviços",
+            "Atos Convocatórios Concernentes às alienações, aquisições de bens, contratações de Obras e Serviços e seus Respectivos Resultados",
+            "Contratos assinados com terceiros e relatório consolidado dos contratos com terceiros"
+        ]
+    },
+    {
+        "categoria": "Termos, Acordos, Convênios e Parcerias",
+        "subCategoria": [
+            "Cópia integral dos convênios, termos de parcerias, acordos, ajustes ou instrumentos congêneres realizados com recursos oriundos do Poder Público Estadual e seus respectivos aditivos",
+            "Relatório Final de Prestação de Contas"
+        ]
+    },
+    {
+        "categoria": "Financeiro",
+        "subCategoria": [
+            "Relatório mensal comparativo de recursos recebidos, gastos e devolvidos ao poder público"
+        ]
+    },
+    {
+        "categoria": "Pessoal",
+        "subCategoria": [
+            "Regulamento para Contratação de Pessoal",
+            "Plano de Cargos, Benefícios e Remuneração",
+            "Ato Convocatório e Avisos de Seleção Pública para Recrutamento e Seleção de Empregados e seus Respectivos Resultados",
+            "Relação Mensal dos Membros da Diretoria e das Chefias de seu Organograma com as Respectivas Remunerações",
+            "Relação Mensal dos Empregados com as Respectivas Remunerações",
+            "Relação Mensal dos Membros dos Conselhos de Administração e Fiscal com as Respectivas Ajudas de Custo",
+            "Relação Mensal dos Servidores Cedidos com as Respectivas Remunerações",
+            "Relação Mensal dos Servidores Devolvidos"
+        ]
+    },
+    {
+        "categoria": "Avaliação, Controle e Monitoramento da Parceria",
+        "subCategoria": [
+            "Relatórios gerenciais",
+            "Documentos de aprovação dos relatórios gerenciais por parte do Conselho de Administração",
+            "Relatório da Comissão de Avaliação ou equivalente da unidade supervisora",
+            "Relatório gerencial de produção",
+            "Relatórios mensais e anuais de suas ações e atividades"
+        ]
+    },
+    {
+        "categoria": "Prestação de Contas Anual da Parceria",
+        "subCategoria": [
+            "Relatórios das ações de controle, como fiscalizações, inspeções e auditorias",
+            "Demonstrações contábeis e financeiras, com as respectivas notas explicativas",
+            "Relatório de auditoria externa sobre as demonstrações contábeis e financeiras",
+            "Parecer conclusivo do Conselho Fiscal acerca das contas e das demonstrações contábeis e financeiras",
+            "Documentações de aprovação do Conselho de Administração acerca das contas e das demonstrações contábeis e financeiras",
+            "Manifestação Conclusiva da Unidade Supervisora",
+            "Manifestação Conclusiva da Unidade de Órgão de Controle Interno",
+            "Despesa Administrativa quando OSS e Unidade Gerida se situarem em localidades diversas"
+        ]
+    }
+]
+module.exports = { conteudo, especialidades, processo_seletivo, unidades, editais, transparencia, portalTransparencia}
