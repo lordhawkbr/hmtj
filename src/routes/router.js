@@ -51,8 +51,14 @@ router.get("/:id?", (req, res) => {
 });
 
 router.get("/processo_seletivo/:id", (req, res, next) => {
-    const pageId = req.params.id;
-    res.render("processo_seletivo", { result: pages.processo_seletivo });
+    const id = req.params.id;
+    const edital = pages.editais.find(item => item.id == id);
+
+    if (edital) {
+        res.render("processo_seletivo", { edital });
+    } else {
+        res.redirect("/");
+    }
 })
 
 router.get("/especialidade/:id", (req, res, next) => {

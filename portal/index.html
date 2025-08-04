@@ -1,0 +1,296 @@
+<link type="text/css" rel="stylesheet"
+    href="https://fluig.hmtj.org.br:8443/style-guide/css/fluig-style-guide.min.css" />
+<script type="text/javascript" src="https://fluig.hmtj.org.br:8443/portal/resources/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://fluig.hmtj.org.br:8443/portal/resources/js/jquery/jquery-ui.min.js">
+</script>
+<script type="text/javascript" src="https://fluig.hmtj.org.br:8443/portal/resources/js/mustache/mustache-min.js">
+</script>
+<script type="text/javascript" src="https://fluig.hmtj.org.br:8443/style-guide/js/fluig-style-guide.min.js"
+    charset="utf-8"></script>
+<script src="https://fluig.hmtj.org.br:8443/wdg_repositorio/resources/js/sketch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+<div class="fluig-style-guide">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <label for="unidadeGerenciada">Unidade Gerenciada</label>
+                <select class="form-control" name="unidadeGerenciada" id="unidadeGerenciada">
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="tipoPublicacao">Tipo de publicação</label>
+                <select class="form-control" name="tipoPublicacao" id="tipoPublicacao" onchange="changeTipoPub(this)">
+                    <option value="">Selecione</option>
+                    <option value="Nova Unidade">Nova Unidade</option>
+                    <option value="Processo Seletivo">Processo Seletivo</option>
+                    <option value="Portal Transparência">Portal Transparência</option>
+                    <option value="Portal Transparência Goias">Portal Transparência Goias</option>
+                </select>
+            </div>
+        </div>
+        <div data-value="Nova Unidade" class="fs-display-none">
+            <div class="row">
+                <div class="col-md-3 form-group">
+                    <label for="codigoUnidade">Código da Unidade</label>
+                    <select name="codigoUnidade" id="codigoUnidade" class="form-control"></select>
+                </div>
+                <div class="col-md-9 form-group">
+                    <label for="nomeUnidade">Nome da Unidade</label>
+                    <input type="text" class="form-control" name="nomeUnidade" id="nomeUnidade">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="estadoUnidade">Estado (UF)</label>
+                    <select name="estadoUnidade" id="estadoUnidade" class="form-control">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="cidadeUnidade">Cidade</label>
+                    <select name="cidadeUnidade" id="cidadeUnidade" class="form-control">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <label for="imgUnidade">Anexe a imagem da unidade</label>
+                    <button class="btn btn-success btn-block" id="imgUnidade"
+                        onclick="javascript:parent.document.querySelector('#lb-input-upload').click()">Anexo</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <label for="apresentacaoUnidade">Texto de Apresentação</label>
+                    <textarea name="apresentacaoUnidade" id="apresentacaoUnidade" class="form-control"
+                        rows="2"></textarea>
+                </div>
+            </div>
+        </div>
+        <div data-value="Processo Seletivo" class="fs-display-none">
+            <div class="row">
+                <div class="col-md-3 form-group">
+                    <label for="">Emergencial?</label>
+                    <select name="" id="" class="form-control">
+                        <option value="">Selecione</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div data-value="Portal Transparência" class="fs-display-none">
+
+        </div>
+        <div data-value="Portal Transparência Goias" class="fs-display-none">
+            <div class="row">
+                <div class="col-md-2 form-group">
+                    <label for="tipoContrato">Tipo de Contrato</label>
+                    <select class="form-control" name="tipoContrato" id="tipoContrato">
+                        <option value="">Selecione</option>
+                        <option value="Gestão">Gestão</option>
+                        <option value="Termo">Termo</option>
+                    </select>
+                </div>
+                <div class="col-md-5 form-group">
+                    <label for="categoria">Categoria</label>
+                    <select class="form-control" name="categoria" id="categoria">
+                        <option value="">Selecione</option>
+                        <option value="Qualificação">Qualificação</option>
+                        <option value="Informaçães Gerais">Informaçães Gerais</option>
+                        <option value="Serviços de Informaçães ao Cidadão (SIC) e Ouvidoria">Serviços de Informaçães ao
+                            Cidadão (SIC) e Ouvidoria</option>
+                        <option value="Perguntas e Respostas Frequentes da Sociedade">Perguntas e Respostas Frequentes
+                            da Sociedade</option>
+                        <option value="Orçamento">Orçamento</option>
+                        <option value="Patrimênio">Patrimênio</option>
+                        <option value="Compras/Contratos">Compras/Contratos</option>
+                        <option value="Termos, Acordos, Convênios e Parcerias">Termos, Acordos, Convênios e Parcerias
+                        </option>
+                        <option value="Financeiro">Financeiro</option>
+                        <option value="Pessoal">Pessoal</option>
+                        <option value="Avaliação, Controle e Monitoramento da Parceria">Avaliação, Controle e
+                            Monitoramento da Parceria</option>
+                        <option value="Prestação de Contas Anual da Parceria">Prestação de Contas Anual da Parceria
+                        </option>
+                    </select>
+                </div>
+                <div class="col-md-5 form-group">
+                    <label for="subcategoria">Subcategoria</label>
+                    <select class="form-control" name="subcategoria" id="subcategoria">
+                        <option value="">Selecione</option>
+                        <option data-categoria="Qualificação" value="Requerimento para Obtenção do T�tulo de OS">
+                            Requerimento para Obtenção do
+                            T�tulo de OS</option>
+                        <option data-categoria="Qualificação" value="Manifestação de Capacidade T�cnica da OS">
+                            Manifestação de Capacidade
+                            T�cnica da OS</option>
+                        <option data-categoria="Qualificação" value="Manifestação da PGE-GO">Manifestação da PGE-GO
+                        </option>
+                        <option data-categoria="Qualificação" value="Estudos T�cnicos Pr�vios">Estudos T�cnicos Pr�vios
+                        </option>
+                        <option data-categoria="Qualificação" value="Decis�o do Chefe do Poder Executivo">Decis�o do
+                            Chefe do Poder Executivo
+                        </option>
+                        <option data-categoria="Informaçães Gerais"
+                            value="Processo de Chamamento P�blico e/ou Dispensa">Processo de Chamamento
+                            P�blico e/ou Dispensa</option>
+                        <option data-categoria="Informaçães Gerais"
+                            value="Termo de Colaboração e/ou Fomento e Aditivos">Termo de Colaboração
+                            e/ou Fomento e Aditivos</option>
+                        <option data-categoria="Informaçães Gerais" value="Estatuto Social / Regimento Interno">Estatuto
+                            Social / Regimento
+                            Interno</option>
+                        <option data-categoria="Informaçães Gerais" value="Organograma">Organograma</option>
+                        <option data-categoria="Informaçães Gerais"
+                            value="Competências Previstas nos Termos de Colaboração e/ou Fomento">
+                            Competências Previstas nos Termos de Colaboração e/ou Fomento</option>
+                        <option data-categoria="Informaçães Gerais" value="Legislação Aplicável">Legislação Aplicável
+                        </option>
+                        <option data-categoria="Informaçães Gerais"
+                            value="Membros dos Conselhos de Administração e Fiscal">Membros dos
+                            Conselhos de Administração e Fiscal</option>
+                        <option data-categoria="Informaçães Gerais"
+                            value="Telefones, E-mails, Endereços e Horários de Atendimento">Telefones,
+                            E-mails, Endereços e Horários de Atendimento</option>
+                        <option data-categoria="Informaçães Gerais" value="Atas de Reuniões">Atas de Reuniões</option>
+                        <option data-categoria="Informaçães Gerais" value="Serviços de Saóde">Serviços de Saóde</option>
+                        <option data-categoria="Serviços de Informaçães ao Cidadão (SIC) e Ouvidoria"
+                            value="SIC Físico - Unidades do Vapt Vupt">SIC Físico - Unidades do Vapt Vupt</option>
+                        <option data-categoria="Serviços de Informaçães ao Cidadão (SIC) e Ouvidoria"
+                            value="Ouvidoria - Atendimento Presencial">Ouvidoria - Atendimento Presencial</option>
+                        <option data-categoria="Serviços de Informaçães ao Cidadão (SIC) e Ouvidoria"
+                            value="e-SIC Eletrênico">e-SIC Eletrênico
+                        </option>
+                        <option data-categoria="Serviços de Informaçães ao Cidadão (SIC) e Ouvidoria"
+                            value="Relatório Anual de Pedidos de Acesso a Informação">Relatório Anual de Pedidos de
+                            Acesso a Informação</option>
+                        <option data-categoria="Serviços de Informaçães ao Cidadão (SIC) e Ouvidoria"
+                            value="Lei de Acesso a Informação Estadual">Lei de Acesso a Informação Estadual</option>
+                        <option data-categoria="Serviços de Informaçães ao Cidadão (SIC) e Ouvidoria"
+                            value="Relatório de Pedidos de Acesso a Informação(Ouvidor SUS)">Relatório de Pedidos de
+                            Acesso a Informação(Ouvidor
+                            SUS)</option>
+                        <option data-categoria="Perguntas e Respostas Frequentes da Sociedade"
+                            value="Perguntas e Respostas Frequentes">
+                            Perguntas e Respostas Frequentes</option>
+                        <option data-categoria="Orçamento" value="Execução Orçamentária Mensal e Acumulada do Ano">
+                            Execução Orçamentária Mensal
+                            e Acumulada do Ano</option>
+                        <option data-categoria="Patrimênio" value="Bens Móveis">Bens Móveis</option>
+                        <option data-categoria="Patrimênio" value="Bens IMóveis">Bens IMóveis</option>
+                        <option data-categoria="Compras/Contratos"
+                            value="Regulamento de contratação para as Alienaçães, Aquisiçães de Bens e Contrataçães de Obras e Serviços">
+                            Regulamento de contratação para as Alienaçães, Aquisiçães de Bens e Contrataçães de Obras e
+                            Serviços</option>
+                        <option data-categoria="Compras/Contratos"
+                            value="Atos Convocat�rios Concernentes �s alienaçães, aquisiçães de bens, contrataçães de Obras e Serviços e seus Respectivos Resultados">
+                            Atos Convocat�rios Concernentes �s alienaçães, aquisiçães de bens, contrataçães de Obras e
+                            Serviços e seus
+                            Respectivos Resultados</option>
+                        <option data-categoria="Compras/Contratos"
+                            value="Contratos assinados com terceiros e relatório consolidado dos contratos com terceiros">
+                            Contratos assinados
+                            com terceiros e relatório consolidado dos contratos com terceiros</option>
+                        <option data-categoria="Termos, Acordos, Convênios e Parcerias"
+                            value="C�pia integral dos convênios, termos de parcerias, acordos, ajustes ou instrumentos congêneres realizados com recursos oriundos do Poder P�blico Estadual e seus respectivos aditivos">
+                            C�pia integral dos convênios, termos de parcerias, acordos, ajustes ou instrumentos
+                            congêneres realizados com
+                            recursos oriundos do Poder P�blico Estadual e seus respectivos aditivos</option>
+                        <option data-categoria="Termos, Acordos, Convênios e Parcerias"
+                            value="Relatório Final de Prestação de Contas">Relatório
+                            Final de Prestação de Contas</option>
+                        <option data-categoria="Financeiro"
+                            value="Relatório mensal comparativo de recursos recebidos, gastos e devolvidos ao poder p�blico">
+                            Relatório mensal
+                            comparativo de recursos recebidos, gastos e devolvidos ao poder p�blico</option>
+                        <option data-categoria="Pessoal" value="Regulamento para Contratação de Pessoal">Regulamento
+                            para Contratação de Pessoal
+                        </option>
+                        <option data-categoria="Pessoal" value="Plano de Cargos, Benef�cios e Remuneração">Plano de
+                            Cargos, Benef�cios e
+                            Remuneração</option>
+                        <option data-categoria="Pessoal"
+                            value="Ato Convocat�rio e Avisos de Seleção P�blica para Recrutamento e Seleção de Empregados e seus Respectivos Resultados">
+                            Ato Convocat�rio e Avisos de Seleção P�blica para Recrutamento e Seleção de Empregados e
+                            seus Respectivos Resultados
+                        </option>
+                        <option data-categoria="Pessoal"
+                            value="Relação Mensal dos Membros da Diretoria e das Chefias de seu Organograma com as Respectivas Remuneraçães">
+                            Relação Mensal dos Membros da Diretoria e das Chefias de seu Organograma com as Respectivas
+                            Remuneraçães</option>
+                        <option data-categoria="Pessoal"
+                            value="Relação Mensal dos Empregados com as Respectivas Remuneraçães">Relação Mensal
+                            dos Empregados com as Respectivas Remuneraçães</option>
+                        <option data-categoria="Pessoal"
+                            value="Relação Mensal dos Membros dos Conselhos de Administração e Fiscal com as Respectivas Ajudas de Custo">
+                            Relação Mensal dos Membros dos Conselhos de Administração e Fiscal com as Respectivas Ajudas
+                            de Custo</option>
+                        <option data-categoria="Pessoal"
+                            value="Relação Mensal dos Servidores Cedidos com as Respectivas Remuneraçães">Relação
+                            Mensal dos Servidores Cedidos com as Respectivas Remuneraçães</option>
+                        <option data-categoria="Pessoal" value="Relação Mensal dos Servidores Devolvidos">Relação Mensal
+                            dos Servidores
+                            Devolvidos</option>
+                        <option data-categoria="Avaliação, Controle e Monitoramento da Parceria"
+                            value="Relatórios gerenciais">Relatórios
+                            gerenciais</option>
+                        <option data-categoria="Avaliação, Controle e Monitoramento da Parceria"
+                            value="Documentos de aprovação dos relatórios gerenciais por parte do Conselho de Administração">
+                            Documentos de
+                            aprovação dos relatórios gerenciais por parte do Conselho de Administração</option>
+                        <option data-categoria="Avaliação, Controle e Monitoramento da Parceria"
+                            value="Relatório da Comiss�o de Avaliação ou equivalente da unidade supervisora">Relatório
+                            da Comiss�o de Avaliação
+                            ou equivalente da unidade supervisora</option>
+                        <option data-categoria="Avaliação, Controle e Monitoramento da Parceria"
+                            value="Relatório gerencial de produção">
+                            Relatório gerencial de produção</option>
+                        <option data-categoria="Avaliação, Controle e Monitoramento da Parceria"
+                            value="Relatórios mensais e anuais de suas açães e atividades">Relatórios mensais e anuais
+                            de suas açães e
+                            atividades</option>
+                        <option data-categoria="Prestação de Contas Anual da Parceria"
+                            value="Relatórios das açães de controle, como fiscalizaçães, inspeçães e auditorias">
+                            Relatórios das açães de
+                            controle, como fiscalizaçães, inspeçães e auditorias</option>
+                        <option data-categoria="Prestação de Contas Anual da Parceria"
+                            value="Demonstraçães cont�beis e financeiras, com as respectivas notas explicativas">
+                            Demonstraçães cont�beis e
+                            financeiras, com as respectivas notas explicativas</option>
+                        <option data-categoria="Prestação de Contas Anual da Parceria"
+                            value="Relatório de auditoria externa sobre as demonstraçães cont�beis e financeiras">
+                            Relatório de auditoria externa
+                            sobre as demonstraçães cont�beis e financeiras</option>
+                        <option data-categoria="Prestação de Contas Anual da Parceria"
+                            value="Parecer conclusivo do Conselho Fiscal acerca das contas e das demonstraçães cont�beis e financeiras">
+                            Parecer
+                            conclusivo do Conselho Fiscal acerca das contas e das demonstraçães cont�beis e financeiras
+                        </option>
+                        <option data-categoria="Prestação de Contas Anual da Parceria"
+                            value="Documentaçães de aprovação do Conselho de Administração acerca das contas e das demonstraçães cont�beis e financeiras">
+                            Documentaçães de aprovação do Conselho de Administração acerca das contas e das
+                            demonstraçães cont�beis e
+                            financeiras</option>
+                        <option data-categoria="Prestação de Contas Anual da Parceria"
+                            value="Manifestação Conclusiva da Unidade Supervisora">
+                            Manifestação Conclusiva da Unidade Supervisora</option>
+                        <option data-categoria="Prestação de Contas Anual da Parceria"
+                            value="Manifestação Conclusiva da Unidade de �rg�o de Controle Interno">Manifestação
+                            Conclusiva da Unidade de �rg�o
+                            de Controle Interno</option>
+                        <option data-categoria="Prestação de Contas Anual da Parceria"
+                            value="Despesa Administrativa quando OSS e Unidade Gerida se situarem em localidades diversas">
+                            Despesa
+                            Administrativa quando OSS e Unidade Gerida se situarem em localidades diversas</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>

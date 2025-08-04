@@ -51,21 +51,49 @@
                 aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <div class="collapse navbar-collapse justify-content-center" id="navbarsExample03">
                 <ul class="navbar-nav nav-underline justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-item nav-link custom-hover link-body-emphasis active" href="/o-hospital">O HOSPITAL</a>
+                        <a class="nav-item nav-link custom-hover link-body-emphasis <%= activeMenu === 'hospital' ? 'active' : '' %>"
+                            href="/o-hospital">
+                            O HOSPITAL
+                        </a>
                     </li>
-                    <li class="nav-item"><a class="nav-item nav-link custom-hover link-body-emphasis" href="/">ENSINO</a></li>
-                    <li class="nav-item"><a class="nav-item nav-link custom-hover link-body-emphasis" href="/unidades">UNIDADES</a></li>
-                    <li class="nav-item"><a class="nav-item nav-link custom-hover link-body-emphasis" href="/transparencia">TRANSPARÊNCIA</a></li>
-                    <li class="nav-item"><a class="nav-item nav-link custom-hover link-body-emphasis" href="/noticias">NOTÍCIAS</a></li>
-                    <li class="nav-item"><a class="nav-item nav-link custom-hover link-body-emphasis" href="/contato">CONTATO</a></li>
+                    <li class="nav-item">
+                        <a class="nav-item nav-link custom-hover link-body-emphasis <%= activeMenu === 'ensino' ? 'active' : '' %>"
+                            href="/">
+                            ENSINO
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item nav-link custom-hover link-body-emphasis <%= activeMenu === 'unidades' ? 'active' : '' %>"
+                            href="/unidades">
+                            UNIDADES
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item nav-link custom-hover link-body-emphasis <%= activeMenu === 'transparencia' ? 'active' : '' %>"
+                            href="/transparencia">
+                            TRANSPARÊNCIA
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item nav-link custom-hover link-body-emphasis <%= activeMenu === 'noticias' ? 'active' : '' %>"
+                            href="/noticias">
+                            NOTÍCIAS
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item nav-link custom-hover link-body-emphasis <%= activeMenu === 'contato' ? 'active' : '' %>"
+                            href="/contato">
+                            CONTATO
+                        </a>
+                    </li>
                     <!-- <li class="nav-item"><a class="nav-item nav-link icon-hover link-body-emphasis fs-5" href="/">ACESSO A INFORMAÇÃO</a></li> -->
                 </ul>
             </div>
         </div>
     </nav>
-    
+
 </div>

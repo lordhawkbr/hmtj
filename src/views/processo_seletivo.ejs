@@ -1,17 +1,20 @@
 <%- include("header") %>
-    <%- include("navbar") %>
+    <%- include("navbar", {activeMenu: "unidades" }) %>
         <main class="container">
             <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary ps_jumbo">
                 <div class="col-lg-9 px-0">
-                    <h1 class="display-4 fst-italic">Unidade X - Edital 001/2025</h1>
-                    </p>
+                    <h1 class="display-4 fst-italic">Unidade <%= edital.unidade %> - <%= edital.subcategoria %>
+                    </h1>
+                    <h3 class="lead">Período <%= new Date(edital.dtAbertura).toLocaleDateString() %> a <%= new
+                                Date(edital.dtEncerramento).toLocaleDateString() %>
+                    </h3>
                 </div>
             </div>
             <div class="row g-5">
                 <div class="col-md-8">
                     <h2 class="fst-italic mb-2">Publicações</h2>
                     <div class="accordion" id="accordion_2">
-                        <% Object.entries(result).forEach(([categoria, grupos], indexCat)=> { %>
+                        <% Object.entries(edital.publicacoes).forEach(([categoria, grupos], indexCat)=> { %>
                             <% if (Array.isArray(grupos) && typeof grupos[0]==='object' && grupos[0] !==null) { %>
                                 <% // Caso como RESULTADO ou CONVOCAÇÃO %>
                                     <% grupos.forEach((grupo, indexGrupo)=> { %>
@@ -92,7 +95,6 @@
 
                                                                     <% }) %>
                     </div>
-
                 </div>
                 <div class="col-md-4">
                     <div class="position-sticky">

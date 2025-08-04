@@ -1,5 +1,5 @@
 <%- include("header") %>
-    <%- include("navbar") %>
+    <%- include("navbar", {activeMenu: "unidades" }) %>
         <main class="container">
             <div class="row my-3">
                 <div class="col-12">
@@ -27,8 +27,9 @@
                     <ul class="nav nav-tabs nav-pills nav-fill justify-content-center" id="myTab" role="tablist">
                         <% transparencia.forEach(function(item, index) { %>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link custom-hover <%= index === transparencia.length - 1 ? 'active' : '' %>" id="<%= item.ano %>-tab" data-bs-toggle="tab"
-                                    data-bs-target="#<%= item.ano %>">
+                                <button
+                                    class="nav-link custom-hover <%= index === transparencia.length - 1 ? 'active' : '' %>"
+                                    id="<%= item.ano %>-tab" data-bs-toggle="tab" data-bs-target="#<%= item.ano %>">
                                     <%= item.ano %>
                                 </button>
                             </li>
